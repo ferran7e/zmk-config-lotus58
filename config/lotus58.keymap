@@ -36,7 +36,7 @@
         };
 
         open_linear {
-            bindings = <&none>;
+            bindings = <&open_linear>;
             key-positions = <35 20 46>;
         };
 
@@ -47,7 +47,7 @@
 
         open_chrome {
             bindings = <&open_chrome>;
-            key-positions = <41 16 32 21>;
+            key-positions = <41 16 32>;
         };
 
         open_hubspot {
@@ -66,7 +66,7 @@
         };
 
         open_gitbook {
-            bindings = <&none>;
+            bindings = <&open_gitbook>;
             key-positions = <29 20 17 43>;
         };
     };
