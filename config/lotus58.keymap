@@ -29,6 +29,46 @@
             bindings = <&open_terminal>;
             key-positions = <15 16 17 47>;
         };
+
+        open_slack {
+            bindings = <&open_slack>;
+            key-positions = <26 35 25>;
+        };
+
+        open_linear {
+            bindings = <&none>;
+            key-positions = <35 20 46>;
+        };
+
+        open_figma {
+            bindings = <&open_figma>;
+            key-positions = <28 20 29>;
+        };
+
+        open_chrome {
+            bindings = <&open_chrome>;
+            key-positions = <41 16 32 21>;
+        };
+
+        open_hubspot {
+            bindings = <&open_hubspot>;
+            key-positions = <32 19 26 43>;
+        };
+
+        open_gmail {
+            bindings = <&open_gmail>;
+            key-positions = <29 25 47>;
+        };
+
+        open_github {
+            bindings = <&open_github>;
+            key-positions = <29 17 32 19>;
+        };
+
+        open_gitbook {
+            bindings = <&none>;
+            key-positions = <29 20 17 43>;
+        };
     };
 
     behaviors {
@@ -81,7 +121,65 @@
             #binding-cells = <0>;
             bindings = <&kp LG(SPACE) &kp T &kp E &kp R &kp M &kp I &kp N &kp A &kp L &kp ENTER>;
             label = "OPEN_TERMINAL";
-            wait-ms = <20>;
+            wait-ms = <30>;
+        };
+
+        open_slack: open_slack {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp S &kp L &kp A &kp C &kp K &kp ENTER>;
+            label = "OPEN_SLACK";
+            wait-ms = <30>;
+        };
+
+        open_linear: open_linear {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp L &kp I &kp N &kp E &kp A &kp R &kp ENTER>;
+            label = "OPEN_LINEAR";
+            wait-ms = <30>;
+        };
+
+        open_figma: open_figma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp F &kp I &kp G &kp M &kp A &kp ENTER>;
+            label = "OPEN_FIGMA";
+        };
+
+        open_chrome: open_chrome {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp C &kp H &kp R &kp O &kp M &kp E &kp ENTER>;
+            label = "OPEN_CHROME";
+        };
+
+        open_hubspot: open_hubspot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp A &kp P &kp P &kp DOT &kp H &kp U &kp B &kp S &kp P &kp O &kp T &kp DOT &kp C &kp O &kp M &kp ENTER>;
+            label = "OPEN_HUBSPOT";
+        };
+
+        open_gmail: open_gmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M &kp ENTER>;
+            label = "OPEN_GMAIL";
+        };
+
+        open_github: open_github {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp H &kp U &kp B &kp DOT &kp C &kp O &kp M &kp ENTER>;
+            label = "OPEN_GITHUB";
+        };
+
+        open_gitbook: open_gitbook {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp A &kp P &kp P &kp DOT &kp G &kp I &kp T &kp B &kp O &kp O &kp K &kp DOT &kp C &kp O &kp M &kp ENTER>;
+            label = "OPEN_GITBOOK";
         };
     };
 
@@ -99,8 +197,8 @@
             bindings = <
 &kp ESC           &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                                       &kp N6     &kp N7         &kp N8             &kp N9   &kp N0    &kp BACKSPACE
 &kp TAB           &kp Q   &kp W   &kp E         &kp R         &kp T                                        &kp Y      &kp U          &kp I              &kp O    &kp P     &kp MINUS
-&kp LEFT_CONTROL  &kp A   &kp S   &kp D         &kp F         &kp G   &kp C_MUTE        &kp C_MUTE         &kp H      &kp J          &kp K              &kp L    &kp SEMI  &mt RSHFT SQT
-&kp LEFT_SHIFT    &kp Z   &kp X   &kp C         &kp V         &kp B   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N      &kp M          &kp COMMA          &kp DOT  &kp FSLH  &mt RCTRL BSLH
+&kp LEFT_CONTROL  &kp A   &kp S   &kp D         &kp F         &kp G   &kp C_MUTE        &kp C_MUTE         &kp H      &kp J          &kp K              &kp L    &kp SEMI  &kp APOSTROPHE
+&kp LEFT_SHIFT    &kp Z   &kp X   &kp C         &kp V         &kp B   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N      &kp M          &kp COMMA          &kp DOT  &kp FSLH  &kp BACKSLASH
                                   &kp LEFT_ALT  &kp LEFT_GUI  &mo 1   &kp SPACE         &kp ENTER          &lt 2 TAB  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
 
@@ -127,7 +225,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LC(LA(RIGHT)) LA(LC(LEFT))>,
-                <&inc_dec_kp LA(LC(RIGHT)) LA(LC(LEFT))>;
+                <&inc_dec_kp LA(LC(LEFT_ARROW)) LA(LC(RIGHT_ARROW))>;
         };
 
         raise_layer {
